@@ -428,13 +428,7 @@ function dragula (initialContainers, options) {
     _mirror.style.width = getRectWidth(rect) + 'px';
     _mirror.style.height = getRectHeight(rect) + 'px';
     classes.rm(_mirror, 'gu-transit');
-    //classes.add(_mirror, 'gu-mirror');
-    _mirror.style.position = 'fixed';
-    _mirror.style.margin = '0';
-    _mirror.style['z-index'] = '9999';
-    _mirror.style.opacity = 0.8;
-    _mirror.style['-ms-filter'] = 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
-    _mirror.style.filter = 'alpha(opacity=80)';
+    classes.add(_mirror, 'gu-mirror');
     o.mirrorContainer.appendChild(_mirror);
     touchy(documentElement, 'add', 'mousemove', drag);
     classes.add(o.mirrorContainer, 'gu-unselectable');
